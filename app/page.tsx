@@ -1,4 +1,5 @@
 
+import AboutUsPage from "./components/Pages/AboutUsPage/AboutUsPage";
 import LandingPage from "./components/Pages/LandingPage/LandingPage";
 import PicturePage from "./components/Pages/PicturePage/PicturePage";
 import WorkWithUsPage from "./components/Pages/Work/WorkWithUsPage";
@@ -9,6 +10,7 @@ export default function Home() {
       <LandingPage/>
       <WorkWithUsPage/>
       <PicturePage/>
+      <AboutUsPage/>
   </div>
   );
 }
