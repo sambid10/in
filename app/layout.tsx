@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Josefin_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar/Navbar";
+import MaskCursor from "./components/MaskCursor/MaskCursor";
+import Loader from "./components/Loader/Loader";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,10 +15,10 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const josefin=Josefin_Sans({
-  variable:"--font-josefin",
-  subsets:["latin"],
-  weight:["100","200","300","400","500","600","700"]
+const josefin = Josefin_Sans({
+  variable: "--font-josefin",
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700"]
 })
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -33,8 +35,11 @@ export default function RootLayout({
       lang="en"
       className={`${josefin.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
-        <Navbar/>
+      <body className="min-h-full flex flex-col relative">
+   <Navbar />
+        <MaskCursor />
+        <Loader />
+     
         {children}
       </body>
     </html>

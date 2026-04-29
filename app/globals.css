@@ -6,10 +6,12 @@
   --color-primary: var(--primary);
   --color-secondary:var(--secondary);
   --color-accent: var(--accent);
+  --color-loader:var(--loader-background)
 }
 
 :root {
   --background: #121315;
+  --loader-background:#17181A;
   --primary: #E0EEEE; 
   --secondary:#353535;   
   --accent: #C1F7F7;     
@@ -19,4 +21,15 @@ body {
   background-color: var(--background);
   color: var(--primary);
   font-family: var(--font-family-primary);
+}
+
+.mask {
+  mask-image: url("/circle.svg");
+  background: #C1F7F7;
+  mask-repeat: no-repeat;
+  color: #C1F7F7;
+  mask-size: 25px;
+  position: fixed;
+  inset: 0;
+  z-index: 10;
 }
