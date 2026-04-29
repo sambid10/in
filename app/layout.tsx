@@ -4,7 +4,6 @@ import "./globals.css";
 import Navbar from "./components/Navbar/Navbar";
 import MaskCursor from "./components/MaskCursor/MaskCursor";
 import Loader from "./components/Loader/Loader";
-
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -36,10 +35,9 @@ export default function RootLayout({
       className={`${josefin.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col relative">
-   <Navbar />
         <MaskCursor />
         <Loader />
-     
+        <Navbar />
         {children}
       </body>
     </html>

@@ -1,12 +1,13 @@
 import * as React from "react"
+import Magnetic from "../Magnetic/MagneticWrapper"
 
 type ButtonProps = React.ComponentProps<"button"> & {
-  variant?: "default" 
+  variant?: "default"
   size?: "default"
 }
 
 const variants = {
-  default: "bg-transparent hover:bg-transparent text-accent hover:bg-primary/90",
+  default: "bg-transparent  hover:bg-accent text-accent hover:text-black",
 }
 
 const sizes = {
@@ -20,11 +21,12 @@ function Button({
   ...props
 }: ButtonProps) {
   return (
-    <button
-      className={`inline-flex border-2 border-accent  items-center justify-center gap-2 rounded-full text-large font-medium transition-all disabled:opacity-50 cursor-pointer ${variants[variant]} ${sizes[size]} ${className}`}
-      {...props}
-    />
+    <Magnetic>
+      <button
+        className={`inline-flex border-2 border-accent shadow-[0_0_0px_var(--color-accent)] hover:shadow-[0_0_80px_var(--color-accent)] items-center justify-center gap-2 rounded-full text-large font-medium transition-all duration-500 disabled:opacity-50 cursor-pointer [&>*]:pointer-events-none ${variants[variant]} ${sizes[size]} ${className}`}
+        {...props}
+      />
+    </Magnetic>
   )
 }
-
-export { Button }
+export {Button}

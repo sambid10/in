@@ -1,12 +1,13 @@
 import * as React from "react"
+import Magnetic from "../Magnetic/MagneticWrapper"
 
 type ButtonProps = React.ComponentProps<"button"> & {
-  variant?: "default" 
+  variant?: "default"
   size?: "default"
 }
 
 const variants = {
-  default: "bg-[#333B3B] hover:bg-transparent text-primary hover:bg-primary/90",
+  default: "bg-[#333B3B] hover:bg-accent cursor-pointer hover:text-black  text-primary",
 }
 
 const sizes = {
@@ -20,11 +21,14 @@ function SecondaryButton({
   ...props
 }: ButtonProps) {
   return (
-    <button
-      className={`inline-flex    items-center justify-center gap-2 rounded-full text-large font-medium transition-all disabled:opacity-50 cursor-pointer ${variants[variant]} ${sizes[size]} ${className} rounded-full`}
-      {...props}
+    <Magnetic>
+        <button
+        className={`flex relative items-center group shadow-[0_0_0px_var(--color-accent)] hover:shadow-[0_0_80px_var(--color-accent)] [&>*]:pointer-events-none justify-center gap-2 rounded-full font-medium transition-all disabled:opacity-50 cursor-pointer ${variants[variant]} ${sizes[size]} ${className}`}
+        {...props}
     />
+    </Magnetic>
+    
   )
 }
 
-export { SecondaryButton}
+export { SecondaryButton }
