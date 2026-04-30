@@ -4,6 +4,8 @@ import ComponentWrapper from "../../ComponentWrapper";
 import { Button } from "../../Button/Button";
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
+import { SecondaryButton } from "../../SecondaryButton/SecondaryButton";
+import { BiArrowToBottom, BiChevronDown } from "react-icons/bi";
 
 const container = {
   hidden: {},
@@ -103,6 +105,9 @@ export default function LandingPage() {
               We roar with success, delivering the TRIONN® <br />
               through design, branding and tech development.
             </motion.p>
+             <motion.div variants={item2}>
+              <SecondaryButton><BiChevronDown/></SecondaryButton>
+            </motion.div>
           </div>
 
           <div className="absolute bottom-18 flex w-full justify-between px-10">
@@ -112,6 +117,7 @@ export default function LandingPage() {
             <motion.div variants={item2}>
               <Button>Get in Touch</Button>
             </motion.div>
+            
           </div>
         </motion.div>
     </ComponentWrapper>

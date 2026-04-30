@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "./components/Navbar/Navbar";
 import MaskCursor from "./components/MaskCursor/MaskCursor";
 import Loader from "./components/Loader/Loader";
+import ReactLenis from "lenis/react";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
