@@ -16,7 +16,7 @@ function AnimatedTitle({
   return (
     <div
       className="relative overflow-hidden"
-      style={{ lineHeight: 0.85 }}
+      style={{ lineHeight: 0.9 }}
     >
       <div>
         {text.split("").map((letter, i) => (
