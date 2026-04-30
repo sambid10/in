@@ -27,13 +27,13 @@ export default function Loader() {
         return () => clearTimeout(timer);
     }, []);
 
-    const initialPath = `M0 0 L${dimension.width} 0 L${dimension.width} ${dimension.height} Q${dimension.width / 2} ${dimension.height + 300} 0 ${dimension.height} L0 0`
-    const targetPath  = `M0 0 L${dimension.width} 0 L${dimension.width} ${dimension.height} Q${dimension.width / 2} ${dimension.height} 0 ${dimension.height} L0 0`
+const initialPath = `M0 0 L${dimension.width} 0 L${dimension.width} ${dimension.height} Q${dimension.width / 2} ${dimension.height - 600} 0 ${dimension.height} L0 0`
 
+const targetPath = `M0 0 L${dimension.width} 0 L${dimension.width} ${dimension.height + 320} Q${dimension.width / 2} ${dimension.height + 320 - 600} 0 ${dimension.height + 320} L0 0`
     return (
         <motion.div
             animate={startAnimate ? { y: "-300%" } : { y: 0 }}
-            transition={{ ease: [0.25, 1, 0.5, 1], duration: 1.7 }}
+            transition={{ ease: [0.25, 1, 0.5, 1], duration: 1.7,delay:startAnimate ? 0.5 : 0  }}
             className="fixed z-[120] inset-0 bg-[#17181A] text-primary flex items-center justify-center"
         >
 
