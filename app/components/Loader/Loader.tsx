@@ -33,7 +33,7 @@ const targetPath = `M0 0 L${dimension.width} 0 L${dimension.width} ${dimension.h
     return (
         <motion.div
             animate={startAnimate ? { y: "-300%" } : { y: 0 }}
-            transition={{ ease: [0.25, 1, 0.5, 1], duration: 1.7,delay:startAnimate ? 0.5 : 0  }}
+            transition={{ ease: [0.25, 1, 0.5, 1], duration: 1.7,delay:startAnimate ? 0.7 : 0  }}
             className="fixed z-[120] inset-0 bg-[#17181A] text-primary flex items-center justify-center"
         >
 
@@ -60,7 +60,7 @@ const targetPath = `M0 0 L${dimension.width} 0 L${dimension.width} ${dimension.h
                 <motion.path
                     animate={{ d: startAnimate ? targetPath : initialPath }}
                     transition={{
-                        duration: 0.7,
+                        duration: 0.8,
                         ease: [0.76, 0, 0.24, 1] as const,
                         delay: startAnimate ? 0.3 : 0
                     }}

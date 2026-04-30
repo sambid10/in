@@ -5,14 +5,14 @@ import { Button } from "../../Button/Button";
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
 import { SecondaryButton } from "../../SecondaryButton/SecondaryButton";
-import { BiArrowToBottom, BiChevronDown } from "react-icons/bi";
+import { BiChevronDown } from "react-icons/bi";
 
 const container = {
   hidden: {},
   show: {
     transition: {
       staggerChildren: 0.5,
-      delayChildren: 1.5,
+      delayChildren: 2,
     },
   },
 };
